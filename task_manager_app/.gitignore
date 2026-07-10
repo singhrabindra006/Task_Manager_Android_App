@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log
+
+# Flutter
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/

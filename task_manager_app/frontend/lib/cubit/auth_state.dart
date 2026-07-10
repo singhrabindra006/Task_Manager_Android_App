@@ -1,0 +1,25 @@
+part of 'auth_cubit.dart';
+
+sealed class AuthState {}
+
+final class AuthInitial extends AuthState {
+  AuthInitial();
+}
+
+final class AuthSignUp extends AuthState {
+  AuthSignUp();
+}
+
+final class AuthLoggedIn extends AuthState {
+  final UserModel user;
+  AuthLoggedIn(this.user);
+}
+
+final class AuthError extends AuthState {
+  final String message;
+  AuthError(this.message);
+}
+
+final class AuthLoading extends AuthState {
+  AuthLoading();
+}

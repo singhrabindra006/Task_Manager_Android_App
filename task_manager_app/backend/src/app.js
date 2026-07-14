@@ -3,6 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
 const { authRouter } = require("./routes/auth.js");
+const { taskRouter } = require("./routes/task.js");
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(helmet());
 //to excess the api for client server i.e UI/UX without cors backend is blocked
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: true,
     credentials: true,
   }),
 );
@@ -25,5 +26,7 @@ app.use(cookieParser());
 
 //Routes
 app.use("/auth", authRouter);
+app.use("/task", taskRouter);
+console.log("task route registered");
 
 module.exports = app;

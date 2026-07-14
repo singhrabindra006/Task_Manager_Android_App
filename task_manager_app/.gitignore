@@ -1,17 +1,15 @@
-# Node
-node_modules/
-npm-debug.log
+# Node.js
+backend/node_modules/
+backend/.env
 
 # Flutter
-.dart_tool/
-build/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-
-# Environment
-.env
+frontend/.dart_tool/
+frontend/build/
 
 # IDE
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db
